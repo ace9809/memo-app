@@ -29,6 +29,9 @@ class App extends Component {
   }
   render() {
     const { memos } = this.props;
+    if (!memos) {
+      return <div>로딩 중..</div>
+    }
     return (
       <Wrapper>
         <Header />
