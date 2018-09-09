@@ -14,9 +14,12 @@ const Wrapper = styled.div`
 `;
 
 const MemoListWrapper = styled.div`
-  float: left;
   width: 40%;
-`
+  height: 100%;
+  float: left;
+  border-right: 1px solid #F3F1F1; 
+  position: absolute;
+`;
 
 const MemoFormWrapper = styled.div`
   float: right;
