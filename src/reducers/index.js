@@ -9,6 +9,8 @@ function memo(state = [], action) {
   switch(action.type) {
     case 'GET_MEMOLIST':
       return state.concat(action.payload.data);
+    case 'ADD_MEMO':
+      return state.concat(action.payload.data);
     default:
       return state
 
