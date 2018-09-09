@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { getMemoList } from '../actions'
 import Header from './Header'
+import Memo from '../components/Memo'
 
 const Wrapper = styled.div`
   width: 100%;
@@ -27,10 +28,19 @@ class App extends Component {
     this.props.getMemoList();
   }
   render() {
+    const { memos } = this.props;
     return (
       <Wrapper>
         <Header />
-        <MemoListWrapper></MemoListWrapper>
+        <MemoListWrapper>
+          {
+            memos.map((memo, index) => {
+              return (
+              <Memo props={memo} key={index}/>
+              )
+            })
+          }
+        </MemoListWrapper>
         <MemoFormWrapper></MemoFormWrapper>
       </Wrapper>
     )
