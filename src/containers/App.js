@@ -10,11 +10,23 @@ const Wrapper = styled.div`
   min-height: 100%;
 `;
 
+const MemoListWrapper = styled.div`
+  float: left;
+  width: 40%;
+`
+
+const MemoFormWrapper = styled.div`
+  float: right;
+  width: 60%;
+`
+
 class App extends Component {
   render() {
     return (
       <Wrapper>
         <Header />
+        <MemoListWrapper></MemoListWrapper>
+        <MemoFormWrapper></MemoFormWrapper>
       </Wrapper>
     )
   }
