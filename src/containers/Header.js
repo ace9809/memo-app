@@ -2,7 +2,9 @@
  * Created by Ace on 2018. 9. 9..
  */
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
+import { addMemo } from '../actions'
 
 const HeaderWrapper = styled.div`
   width: 100%;
@@ -36,7 +38,7 @@ class Header extends Component {
     return (
       <HeaderWrapper>
         <NavWrapper>
-          <Button color={'#5cb85c'}>
+          <Button color={'#5cb85c'} onClick={this.props.addMemo}>
             작성하기
           </Button>
           <Button color={'#d9534f'}>
