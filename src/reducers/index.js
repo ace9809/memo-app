@@ -4,17 +4,11 @@ const rootReducer = combineReducers({
   memo
 });
 
-function memo(state = {}, action) {
+function memo(state = [], action) {
+  console.log('action', action);
   switch(action.type) {
     case 'GET_MEMOLIST':
-      console.log('action', [
-      ...state,
-      action.payload.data
-    ])
-      return [
-        ...state,
-        action.payload.data
-      ]
+      return state.concat(action.payload.data);
     default:
       return state
 
