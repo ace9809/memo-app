@@ -58,10 +58,12 @@ class App extends Component {
               memos.map((memo, index) => {
                 return (
                   <Route
-                    key={index}
+                    key={memo.id}
                     path={'/' + memo.id}
-                    exact={true}
-                    component={MemoForm}
+                    id={memo.id}
+                    render={
+                      ()=><MemoForm id={memo.id} />
+                    }
                   />
                 )
               })
