@@ -14,6 +14,11 @@ function memo(state = [], action) {
         ...state,
         all: action.payload.data
       }
+    case 'GET_MEMO':
+      return {
+        ...state,
+        memo: action.payload.data
+      }
     case 'ADD_MEMO':
       return {
       ...state,
