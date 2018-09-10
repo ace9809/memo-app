@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import SimpleMDE from 'react-simplemde-editor';
-import { getMemo } from '../actions';
+import { getMemo, modifyMemo } from '../actions';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -39,11 +39,11 @@ class MemoForm extends Component {
       title: '',
       description: this.props.description
     };
-    // this.handleChange = this.handleChange.bind(this);
   }
 
-  handleTitleChange = event => {
+  handleTitleChange = (event) => {
     this.setState({ title: event.target.value });
+    this.props.modifyMemo(this.props.id);
   }
 
   handleDescriptionChange = value => {
@@ -96,4 +96,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { getMemo })(MemoForm);
+export default connect(mapStateToProps, { getMemo, modifyMemo })(MemoForm);
