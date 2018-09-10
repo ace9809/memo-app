@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { getMemoList } from '../actions'
 import Header from './Header'
+import MemoForm from './MemoForm'
 import Memo from '../components/Memo'
 
 const Wrapper = styled.div`
@@ -53,6 +54,18 @@ class App extends Component {
             }
           </MemoListWrapper>
           <MemoFormWrapper>
+            {
+              memos.map((memo, index) => {
+                return (
+                  <Route
+                    key={index}
+                    path={'/' + memo.id}
+                    exact={true}
+                    component={MemoForm}
+                  />
+                )
+              })
+            }
           </MemoFormWrapper>
         </Wrapper>
       </Router>
