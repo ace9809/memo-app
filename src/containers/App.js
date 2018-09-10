@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { getMemoList } from '../actions'
 import Header from './Header'
 import Memo from '../components/Memo'
@@ -36,22 +37,25 @@ class App extends Component {
       return <div>로딩 중..</div>
     }
     return (
-      <Wrapper>
-        <button onClick={this.props.addMemo}>
-          작성하기
-        </button>
-        <Header />
-        <MemoListWrapper>
-          {
-            memos.map((memo, index) => {
-              return (
-              <Memo props={memo} key={index}/>
-              )
-            })
-          }
-        </MemoListWrapper>
-        <MemoFormWrapper></MemoFormWrapper>
-      </Wrapper>
+      <Router>
+        <Wrapper>
+          <button onClick={this.props.addMemo}>
+            작성하기
+          </button>
+          <Header />
+          <MemoListWrapper>
+            {
+              memos.map((memo, index) => {
+                return (
+                  <Link to={'/' + memo.id}><Memo props={memo} key={index}/></Link>
+                )
+              })
+            }
+          </MemoListWrapper>
+          <MemoFormWrapper>
+          </MemoFormWrapper>
+        </Wrapper>
+      </Router>
     )
   }
 }
