@@ -27,9 +27,9 @@ export const addMemo = () => {
   }
 }
 
-export const modifyMemo = () => {
+export const modifyMemo = (id) => {
   return {
     type: MODIFY_MEMO,
-    payload: api.modifyMemo()
+    payload: api.modifyMemo(id)
   }
 }
