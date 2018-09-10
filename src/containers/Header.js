@@ -41,9 +41,6 @@ class Header extends Component {
           <Button color={'#5cb85c'} onClick={this.props.addMemo}>
             작성하기
           </Button>
-          <Button color={'#d9534f'}>
-            삭제하기
-          </Button>
         </NavWrapper>
       </HeaderWrapper>
     )

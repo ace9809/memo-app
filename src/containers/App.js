@@ -40,9 +40,6 @@ class App extends Component {
     return (
       <Router>
         <Wrapper>
-          <button onClick={this.props.addMemo}>
-            작성하기
-          </button>
           <Header />
           <MemoListWrapper>
             {
