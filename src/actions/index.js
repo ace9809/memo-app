@@ -2,6 +2,7 @@ import {
   GET_MEMOLIST,
   GET_MEMO,
   ADD_MEMO,
+  DELETE_MEMO,
   MODIFY_MEMO
 } from './constants';
 import api from '../utils/api'
@@ -31,5 +32,12 @@ export const modifyMemo = (id) => {
   return {
     type: MODIFY_MEMO,
     payload: api.modifyMemo(id)
+  }
+}
+
+export const modifyMemo = (id) => {
+  return {
+    type: DELETE_MEMO,
+    payload: api.deleteMemo(id)
   }
 }
