@@ -24,6 +24,11 @@ function memo(state = [], action) {
       ...state,
       all: action.payload.data
     }
+    case 'MODIFY_MEMO':
+      return {
+        ...state,
+        memo: action.payload.data
+      }
     default:
       return state
 
