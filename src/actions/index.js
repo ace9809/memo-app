@@ -25,3 +25,10 @@ export const addMemo = () => {
     payload: api.createMemo()
   }
 }
+
+export const modifyMemo = () => {
+  return {
+    type: MODIFY_MEMO,
+    payload: api.modifyMemo()
+  }
+}
