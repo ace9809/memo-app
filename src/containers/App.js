@@ -75,7 +75,7 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
-    memos: state.memo
+    memos: state.memo.all
   }
 }
 
