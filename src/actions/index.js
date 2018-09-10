@@ -1,7 +1,8 @@
 import {
   GET_MEMOLIST,
   GET_MEMO,
-  ADD_MEMO
+  ADD_MEMO,
+  MODIFY_MEMO
 } from './constants';
 import api from '../utils/api'
 
