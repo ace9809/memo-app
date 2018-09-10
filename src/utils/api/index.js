@@ -10,6 +10,9 @@ export default {
   getMemo(id) {
     return axios.get(`http://114.207.113.7:11111/memo-list/${id}/`);
   },
+  modifyMemo(id) {
+    return axios.put(`http://114.207.113.7:11111/memo-list/${id}/`);
+  },
   createMemo() {
     return axios.post('http://114.207.113.7:11111/memo-list/create/');
   }
