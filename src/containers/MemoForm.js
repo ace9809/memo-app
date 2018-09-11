@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import SimpleMDE from 'react-simplemde-editor';
-import { getMemo, modifyMemo } from '../actions';
+import { getMemo, modifyMemo, deleteMemo } from '../actions';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -48,6 +48,10 @@ class MemoForm extends Component {
 
   handleDescriptionChange = value => {
     this.setState({ description: value });
+  }
+
+  deleteMemo = () => {
+    this.props.deleteMemo(this.props.match.params.id)
   }
 
   componentWillMount() {

@@ -35,7 +35,7 @@ export const modifyMemo = (id) => {
   }
 }
 
-export const modifyMemo = (id) => {
+export const deleteMemo = (id) => {
   return {
     type: DELETE_MEMO,
     payload: api.deleteMemo(id)
