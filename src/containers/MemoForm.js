@@ -102,9 +102,10 @@ class MemoForm extends Component {
 }
 
 function mapStateToProps(state) {
+  console.log('state', state);
   return {
     memo: state.memo.memo
   }
 }
 
-export default connect(mapStateToProps, { getMemo, modifyMemo })(MemoForm);
+export default connect(mapStateToProps, { getMemo, modifyMemo, deleteMemo })(MemoForm);
