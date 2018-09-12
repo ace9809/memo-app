@@ -54,14 +54,21 @@ class MemoForm extends Component {
     this.props.deleteMemo(this.props.match.params.id)
   }
 
-  componentWillMount() {
-    this.props.getMemo(this.props.id);
+  componentDidMount() {
+    this.props.getMemo(this.props.match.params.id);
     if (this.props.memo) {
       this.setState({
         title: this.props.memo.title
       })
     }
   }
+
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.id !== this.props.id) {
+      this.props.getMemo(this.props.match.params.id);
+    }
+  }
+
   render() {
     if (!this.props.memo) {
       return <div>로딩 중...</div>
