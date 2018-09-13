@@ -51,11 +51,11 @@ class MemoForm extends Component {
   }
 
   deleteMemo = () => {
-    this.props.deleteMemo(this.props.match.params.id)
+    this.props.deleteMemo(this.props.id)
   }
 
   componentDidMount() {
-    this.props.getMemo(this.props.match.params.id);
+    this.props.getMemo(this.props.id);
     if (this.props.memo) {
       this.setState({
         title: this.props.memo.title
