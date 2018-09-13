@@ -45,18 +45,26 @@ class App extends Component {
             {
               memos.map((memo, index) => {
                 return (
-                  <Link to={`/${memo.id}`}><Memo props={memo} key={index}/></Link>
+                  <div>
+                    <Link to={`/${memo.id}`}><Memo props={memo} key={index}/></Link>
+                  </div>
+
                 )
               })
             }
           </MemoListWrapper>
           <MemoFormWrapper>
+            {
+              memos.map(memo => {
+                return (
                   <Route
-                    path='/:id'
-                    component={(props) => {
-                      return <MemoForm id={props.match.params.id} />
-                    }}
+                    path={`/${memo.id}`}
+                    render={props => <MemoForm id={memo.id} />}
                   />
+                )
+              })
+            }
+
           </MemoFormWrapper>
         </Wrapper>
       </Router>
