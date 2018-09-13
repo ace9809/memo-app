@@ -63,12 +63,6 @@ class MemoForm extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    if(nextProps.id !== this.props.id) {
-      this.props.getMemo(this.props.match.params.id);
-    }
-  }
-
   render() {
     if (!this.props.memo) {
       return <div>로딩 중...</div>
@@ -102,7 +96,6 @@ class MemoForm extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log('state', state);
   return {
     memo: state.memo.memo
   }
