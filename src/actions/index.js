@@ -36,8 +36,9 @@ export const modifyMemo = (id) => {
 }
 
 export const deleteMemo = (id) => {
+  api.deleteMemo(id)
   return {
     type: DELETE_MEMO,
-    payload: api.deleteMemo(id)
+    payload: id
   }
 }
