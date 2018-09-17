@@ -17,7 +17,7 @@ const HeaderWrapper = styled.div`
 `;
 
 const NavWrapper = styled.div`
-  margin-right: 35px;
+  margin-right: 25px;
   display: flex;
 `;
 
