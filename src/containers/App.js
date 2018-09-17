@@ -29,9 +29,10 @@ const MemoFormWrapper = styled.div`
 `
 
 class App extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.getMemoList();
   }
+
   render() {
     const { memos } = this.props;
     if (!memos) {
