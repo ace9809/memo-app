@@ -37,30 +37,53 @@ class MemoForm extends Component {
     super(props);
     this.state = {
       title: '',
-      description: this.props.description
+      description: ''
     };
   }
 
-  handleTitleChange = (event) => {
-    this.setState({ title: event.target.value });
-    this.props.modifyMemo(this.props.id);
+  handleTitleChange = event => {
+    this.setState({
+      title: event.target.value,
+    })
+    this.debounceUpdateMemo(event)
   }
 
+
   handleDescriptionChange = value => {
-    this.setState({ description: value });
+    this.setState({
+      description: value,
+    })
+
+    this.debounceUpdateMemo(event)
   }
 
   deleteMemo = () => {
     this.props.deleteMemo(this.props.id)
   }
 
+  updateMemo = () => {
+    this.props.modifyMemo(this.props.id, { 'title': this.state.title, 'description': this.state.description })
+  };
+
+  debounceUpdateMemo = _.debounce(function() {
+    this.updateMemo();
+  }, 1000);
+
   componentDidMount() {
     this.props.getMemo(this.props.id);
     if (this.props.memo) {
       this.setState({
-        title: this.props.memo.title
+        title: this.props.memo.title,
+        description: this.props.memo.description
       })
     }
+  }
+
+  componentWillReceiveProps(nextProps) {
+      this.setState({
+        title: nextProps.memo.title,
+        description: nextProps.memo.description
+      })
   }
 
   render() {
@@ -74,6 +97,7 @@ class MemoForm extends Component {
       placeholder: "입력해주세요...",
       initialValue: this.props.memo.description,
     }
+
     return (
      <Wrapper>
        <TitleWrapper>
