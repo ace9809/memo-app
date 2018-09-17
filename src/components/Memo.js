@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   border-bottom: 1px solid #F3F1F1;
   padding: 20px;
   cursor: pointer;
+  overflow: hidden;
   
   &:hover {
     background-color: #CAC7C7;
