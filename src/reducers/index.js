@@ -23,8 +23,16 @@ function memo(state = { all: [], memo: null} , action) {
       all: state.all.concat(action.payload.data)
     }
     case 'MODIFY_MEMO':
+      const updatedAllMemos = _.map(state.all, memo => {
+        if(memo.id === action.payload.data.id){
+          return { ...memo, ...action.payload.data }
+        }
+        return memo
+      });
+
       return {
         ...state,
+        all: updatedAllMemos,
         memo: action.payload.data
       }
     case 'DELETE_MEMO':
