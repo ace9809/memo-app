@@ -28,6 +28,13 @@ const MemoFormWrapper = styled.div`
   width: 60%;
 `
 
+const StyledLink = styled(Link)`
+  &:link {text-decoration: none; color: black;}
+  &:visited {text-decoration: none; color: black;}
+  &:active {text-decoration: none; color: black;}
+  &:hover {text-decoration: none; color: black;}
+`;
+
 class App extends Component {
   componentDidMount() {
     this.props.getMemoList();
@@ -47,7 +54,7 @@ class App extends Component {
               memos.map((memo, index) => {
                 return (
                   <div>
-                    <Link to={`/${memo.id}`}><Memo props={memo} key={index}/></Link>
+                    <StyledLink to={`/${memo.id}`}><Memo props={memo} key={index}/></StyledLink>
                   </div>
 
                 )
