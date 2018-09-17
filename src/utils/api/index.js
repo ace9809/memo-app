@@ -10,8 +10,8 @@ export default {
   getMemo(id) {
     return axios.get(`http://114.207.113.7:11111/memo-list/${id}/`);
   },
-  modifyMemo(id) {
-    return axios.put(`http://114.207.113.7:11111/memo-list/${id}/`);
+  modifyMemo(id, content) {
+    return axios.put(`http://114.207.113.7:11111/memo-list/${id}/`, content);
   },
   deleteMemo(id) {
     return axios.delete(`http://114.207.113.7:11111/memo-list/${id}/`);

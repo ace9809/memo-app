@@ -28,10 +28,10 @@ export const addMemo = () => {
   }
 }
 
-export const modifyMemo = (id) => {
+export const modifyMemo = (id, content) => {
   return {
     type: MODIFY_MEMO,
-    payload: api.modifyMemo(id)
+    payload: api.modifyMemo(id, content)
   }
 }
 
