@@ -9,7 +9,6 @@ const Wrapper = styled.div`
   border-bottom: 1px solid #F3F1F1;
   padding: 20px;
   cursor: pointer;
-  overflow: hidden;
   
   &:hover {
     background-color: #CAC7C7;
@@ -25,8 +24,11 @@ const CreatedWrapper = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-  margin: 20px 0
-`
+  margin: 20px 0 10px 0;
+  padding: 5px 0;
+  height: 55px;
+  overflow: hidden;
+`;
 
 const Memo = (memo) => {
   const {
