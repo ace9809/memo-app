@@ -118,7 +118,7 @@ class MemoForm extends Component {
     return (
      <Wrapper>
        <ButtonWrapper>
-         <Button>삭제하기</Button>
+         <Button onClick={this.deleteMemo}>삭제하기</Button>
        </ButtonWrapper>
        <TitleWrapper>
          <TitleInput
