@@ -12,8 +12,14 @@ const HeaderWrapper = styled.div`
   background-color: #fff;
   border-bottom: 1px solid #F3F1F1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+`;
+
+const TitleWrapper = styled.div`
+  font-weight:bold
+  font-size: 30px;
+  margin-left: 35px;
 `;
 
 const NavWrapper = styled.div`
@@ -37,6 +43,9 @@ class Header extends Component {
   render() {
     return (
       <HeaderWrapper>
+        <TitleWrapper>
+          Symphony Note
+        </TitleWrapper>
         <NavWrapper>
           <Button color={'#5cb85c'} onClick={this.props.addMemo}>
             작성하기
