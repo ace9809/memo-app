@@ -8,6 +8,12 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
+const ButtonWrapper = styled.div`
+  margin: 10px 25px 0 25px;
+  display: flex;
+  justify-content: flex-end;
+`;
+
 const TitleWrapper = styled.div`
   display: flex;
 `;
@@ -30,6 +36,17 @@ const TitleInput = styled.input`
   outline: none;
   background-position: 0 0;
   }
+`;
+
+const Button = styled.button`
+  border-radius: 6px;
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+  background-color: #d9534f;
+  outline: 0;
+  border: 0;
+  color: white;
 `;
 
 class MemoForm extends Component {
@@ -100,6 +117,9 @@ class MemoForm extends Component {
 
     return (
      <Wrapper>
+       <ButtonWrapper>
+         <Button>삭제하기</Button>
+       </ButtonWrapper>
        <TitleWrapper>
          <TitleInput
            type="text"
