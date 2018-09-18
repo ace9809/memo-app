@@ -63,7 +63,7 @@ class Header extends Component {
         <Modal open={open} onClose={this.onCloseModal} center>
         </Modal>
         <NavWrapper>
-          <Button color={'#5cb85c'} onClick={this.onOpenModal}>
+          <Button color={'#f0ad4e'} onClick={this.onOpenModal}>
             공지사항
           </Button>
           <Button color={'#5cb85c'} onClick={this.props.addMemo}>
