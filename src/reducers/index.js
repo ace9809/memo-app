@@ -20,7 +20,7 @@ function memo(state = { all: [], memo: null} , action) {
     case 'ADD_MEMO':
       return {
       ...state,
-      all: state.all.concat(action.payload.data)
+      all: [action.payload.data, ...state.all]
     }
     case 'MODIFY_MEMO':
       const updatedAllMemos = _.map(state.all, memo => {
