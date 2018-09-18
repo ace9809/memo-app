@@ -20,12 +20,14 @@
   "dependencies": {
     "axios": "^0.18.0",
     "babel-preset-stage-1": "^6.1.18",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.11",
     "react": "16.3.2",
     "react-dom": "16.3.2",
     "react-redux": "5.0.7",
+    "react-responsive-modal": "^3.4.0",
     "react-router-dom": "^4.3.1",
     "react-simplemde-editor": "^3.6.16",
+    "react-spinners": "^0.4.5",
     "redux": "4.0.0",
     "redux-promise": "^0.6.0",
     "styled-components": "^3.4.5"
