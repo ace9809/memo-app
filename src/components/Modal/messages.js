@@ -18,7 +18,7 @@ export default {
     defaultMessage: '삭제하려는 메모를 클릭 후 삭제하기 버튼을 누르면 글이 삭제가 됩니다.'
   },
   modifyMemoDescription: {
-    defaultMessage: '글을 수정하면 자동적으로 저장이 되며 글의 제목을 공백으로 둘 수 없습니다.'
+    defaultMessage: '글을 수정하면 자동적으로 저장이 되며 글의 제목과 내용을 공백으로 둘 수 없습니다.'
   },
   bugReport: {
     defaultMessage: '버그는 풀리퀘를 날려주시면 감사하겠습니다!'
