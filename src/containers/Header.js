@@ -4,8 +4,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import Modal from '../components/Modal/index';
-import { addMemo } from '../actions'
+import Modal from 'components/Modal/index';
+import { addMemo } from 'actions'
 
 const HeaderWrapper = styled.div`
   width: 100%;

@@ -5,7 +5,7 @@ import {
   DELETE_MEMO,
   MODIFY_MEMO
 } from './constants';
-import api from '../utils/api'
+import api from 'utils/api'
 
 export const getMemoList = () => {
   return {

@@ -6,9 +6,9 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { getMemoList } from '../actions'
-import Header from './Header'
-import MemoForm from './MemoForm'
-import Memo from '../components/Memo'
+import Header from 'containers/Header'
+import MemoForm from 'containers/MemoForm'
+import Memo from 'components/Memo'
 
 const Wrapper = styled.div`
   width: 100%;
