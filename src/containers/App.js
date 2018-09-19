@@ -48,7 +48,7 @@ class App extends Component {
   }
 
   render() {
-    const { memos } = this.props;
+    const { memos, selectMemo } = this.props;
     if (!memos) {
       return <div>로딩 중..</div>
     }
@@ -59,12 +59,18 @@ class App extends Component {
           <MemoListWrapper>
             {
               memos.map((memo, index) => {
-                return (
-                  <div>
-                    <StyledLink to={`/${memo.id}`}><Memo props={memo} key={index}/></StyledLink>
-                  </div>
+                if (selectMemo) {
+                  let currentMemo = false;
+                  if (memo.id === selectMemo.id) {
+                    currentMemo = true;
+                  }
+                  return (
+                    <div>
+                      <StyledLink to={`/${memo.id}`}><Memo props={memo} key={index} currentMemo={currentMemo}/></StyledLink>
+                    </div>
 
-                )
+                  )
+                }
               })
             }
           </MemoListWrapper>
@@ -79,7 +85,6 @@ class App extends Component {
                 )
               })
             }
-
           </MemoFormWrapper>
           <ToastContainer autoClose={2000} position={"top-center"}/>
         </Wrapper>
@@ -90,7 +95,8 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
-    memos: state.memo.all
+    memos: state.memo.all,
+    selectMemo: state.memo.memo
   }
 }
 

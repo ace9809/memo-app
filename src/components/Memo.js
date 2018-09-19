@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   border-bottom: 1px solid #F3F1F1;
   padding: 20px;
   cursor: pointer;
+  border: ${props => props.currentMemo ? '2px solid #1abc9c' : ''}
   
   &:hover {
     background-color: #CAC7C7;
@@ -34,10 +35,10 @@ const Memo = (memo) => {
   const {
     title,
     description,
-    created
+    created,
   } = memo.props;
   return(
-    <Wrapper>
+    <Wrapper currentMemo={memo.currentMemo}>
       <TitleWrapper>
         {title}
       </TitleWrapper>
