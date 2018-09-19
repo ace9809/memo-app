@@ -11,7 +11,7 @@ function memo(state = { all: [], memo: null} , action) {
     case 'GET_MEMOLIST':
       return {
         ...state,
-        all: action.payload.data
+        all: _(action.payload.data).clone().reverse()
       }
     case 'GET_MEMO':
       return {
