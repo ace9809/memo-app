@@ -89,7 +89,7 @@ class MemoForm extends Component {
 
   componentDidMount() {
     this.props.getMemo(this.props.id);
-    if (this.props.memo) {
+    if (Object.keys(this.props.memo).length !== 0) {
       this.setState({
         title: this.props.memo.title,
         description: this.props.memo.description
