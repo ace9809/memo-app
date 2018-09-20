@@ -59,15 +59,15 @@ class App extends Component {
           <Header />
           <MemoListWrapper>
             {
-              memos.map((memo, index) => {
+              memos.map(memo => {
                 if (selectMemo) {
                   let currentMemo = false;
                   if (memo.id === selectMemo.id) {
                     currentMemo = true;
                   }
                   return (
-                    <div>
-                      <StyledLink to={`/${memo.id}`}><Memo memo={memo} key={index} currentMemo={currentMemo}/></StyledLink>
+                    <div key={memo.id}>
+                      <StyledLink to={`/${memo.id}`}><Memo memo={memo} currentMemo={currentMemo}/></StyledLink>
                     </div>
 
                   )
@@ -80,6 +80,7 @@ class App extends Component {
               memos.map(memo => {
                 return (
                   <Route
+                    key={memo.id}
                     path={`/${memo.id}`}
                     render={props => <MemoForm id={memo.id} />}
                   />
