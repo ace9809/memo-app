@@ -6,7 +6,7 @@ const rootReducer = combineReducers({
   memo
 });
 
-function memo(state = { all: [], memo: null} , action) {
+function memo(state = { all: [], memo: {} } , action) {
   switch(action.type) {
     case 'GET_MEMOLIST':
       return {
