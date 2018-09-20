@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import SimpleMDE from 'react-simplemde-editor';
 import { getMemo, modifyMemo, deleteMemo } from 'actions';
 
@@ -144,5 +145,14 @@ function mapStateToProps(state) {
     memo: state.memo.memo
   }
 }
+
+MemoForm.propTypes = {
+  memo: PropTypes.object,
+  id: PropTypes.number
+};
+
+MemoForm.defaultProps = {
+  memo: {}
+};
 
 export default connect(mapStateToProps, { getMemo, modifyMemo, deleteMemo })(MemoForm);

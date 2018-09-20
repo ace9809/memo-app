@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
   height: 120px;
@@ -50,5 +51,15 @@ const Memo = (props) => {
     </Wrapper>
   )
 }
+
+Memo.propTypes = {
+  memo: PropTypes.object,
+  currentMemo: PropTypes.bool
+};
+
+Memo.defaultProps = {
+  memo: {},
+  currentMemo: false
+};
 
 export default Memo;

@@ -4,6 +4,7 @@
 import React from 'react';
 import ResponsiveModal from 'react-responsive-modal';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import messages from './messages';
 
 const H1 = styled.h1`
@@ -29,5 +30,15 @@ const Modal = (props) => {
     </ResponsiveModal>
   )
 }
+
+Modal.propTypes = {
+  open: PropTypes.bool,
+  onClose: PropTypes.func
+};
+
+Modal.defaultProps = {
+  open: false,
+  onClose: () => {}
+};
 
 export default Modal;

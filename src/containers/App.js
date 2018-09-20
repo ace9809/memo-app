@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { getMemoList } from 'actions'
 import Header from 'containers/Header'
@@ -96,8 +97,20 @@ class App extends Component {
 function mapStateToProps(state) {
   return {
     memos: state.memo.all,
-    selectMemo: state.memo.memo
+    selectMemo: state.memo.memo,
   }
 }
+
+App.propTypes = {
+  memos: PropTypes.array,
+  selectMemo: PropTypes.object,
+  getMemoList: PropTypes.func
+};
+
+App.defaultProps = {
+  memos: [],
+  selectMemo: {},
+  getMemoList: () => {}
+};
 
 export default connect(mapStateToProps, { getMemoList })(App);
