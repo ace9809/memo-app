@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { getMemoList } from '../actions'
+import { getMemoList } from 'actions'
 import Header from 'containers/Header'
 import MemoForm from 'containers/MemoForm'
 import Memo from 'components/Memo'
