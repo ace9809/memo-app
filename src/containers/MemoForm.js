@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import SimpleMDE from 'react-simplemde-editor';
 import { getMemo, modifyMemo, deleteMemo } from 'actions';
+import "simplemde/dist/simplemde.min.css";
 
 const Wrapper = styled.div`
   width: 100%;
