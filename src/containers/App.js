@@ -66,7 +66,7 @@ class App extends Component {
                   }
                   return (
                     <div>
-                      <StyledLink to={`/${memo.id}`}><Memo props={memo} key={index} currentMemo={currentMemo}/></StyledLink>
+                      <StyledLink to={`/${memo.id}`}><Memo memo={memo} key={index} currentMemo={currentMemo}/></StyledLink>
                     </div>
 
                   )
