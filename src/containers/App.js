@@ -50,7 +50,7 @@ class App extends Component {
 
   render() {
     const { memos, selectMemo } = this.props;
-    if (!memos) {
+    if (memos.length === 0) {
       return <div>로딩 중..</div>
     }
     return (
