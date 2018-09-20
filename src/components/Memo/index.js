@@ -31,22 +31,21 @@ const ContentWrapper = styled.div`
   overflow: hidden;
 `;
 
-const Memo = (memo) => {
+const Memo = (props) => {
   const {
-    title,
-    description,
-    created,
-  } = memo.props;
+    memo,
+    currentMemo
+  } = props;
   return(
-    <Wrapper currentMemo={memo.currentMemo}>
+    <Wrapper currentMemo={currentMemo}>
       <TitleWrapper>
-        {title}
+        {memo.title}
       </TitleWrapper>
       <CreatedWrapper>
-        {created}
+        {memo.created}
       </CreatedWrapper>
       <ContentWrapper>
-        {description}
+        {memo.description}
       </ContentWrapper>
     </Wrapper>
   )
