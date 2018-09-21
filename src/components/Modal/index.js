@@ -25,11 +25,11 @@ const Modal = (props) => {
       <p>{messages.addMemoDescription.defaultMessage}</p><br />
       <p>{messages.deleteMemoDescription.defaultMessage}</p><br />
       <p>{messages.modifyMemoDescription.defaultMessage}</p><br /><br /><br />
-      <p>{messages.bugReport.defaultMessage} <a href={messages.githubUrl.defaultMessage} target="_blank">{messages.githubUrl.defaultMessage}</a></p>
+      <p>{messages.bugReport.defaultMessage}<a href={messages.githubUrl.defaultMessage} target="_blank">{messages.githubUrl.defaultMessage}</a></p>
 
     </ResponsiveModal>
   )
-}
+};
 
 Modal.propTypes = {
   open: PropTypes.bool,

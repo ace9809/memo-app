@@ -6,10 +6,10 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { getMemoList } from 'actions'
-import Header from 'containers/Header'
-import MemoForm from 'containers/MemoForm'
-import Memo from 'components/Memo'
+import { getMemoList } from 'actions';
+import Header from 'containers/Header';
+import MemoForm from 'containers/MemoForm';
+import Memo from 'components/Memo';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify";
 
@@ -91,7 +91,7 @@ class App extends Component {
           <ToastContainer autoClose={2000} position={"top-center"}/>
         </Wrapper>
       </Router>
-    )
+    );
   }
 }
 

@@ -26,6 +26,4 @@ export default {
   githubUrl: {
     defaultMessage: 'https://github.com/ace9809/memo-app'
   }
-
-
 }

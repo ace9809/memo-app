@@ -50,7 +50,7 @@ const Memo = (props) => {
       </ContentWrapper>
     </Wrapper>
   )
-}
+};
 
 Memo.propTypes = {
   memo: PropTypes.object,

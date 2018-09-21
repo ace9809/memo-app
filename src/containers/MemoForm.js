@@ -65,7 +65,7 @@ class MemoForm extends Component {
       title: event.target.value,
     })
     this.debounceUpdateMemo(event)
-  }
+  };
 
 
   handleDescriptionChange = value => {
@@ -74,11 +74,11 @@ class MemoForm extends Component {
     })
 
     this.debounceUpdateMemo(event)
-  }
+  };
 
   deleteMemo = () => {
     this.props.deleteMemo(this.props.id)
-  }
+  };
 
   updateMemo = () => {
     if (!this.state.title || !this.state.description) {

@@ -12,28 +12,28 @@ export const getMemoList = () => {
     type: GET_MEMOLIST,
     payload: api.getInitialMemo()
   }
-}
+};
 
 export const getMemo = (id) => {
   return {
     type: GET_MEMO,
     payload: api.getMemo(id)
   }
-}
+};
 
 export const addMemo = () => {
   return {
     type: ADD_MEMO,
     payload: api.createMemo()
   }
-}
+};
 
 export const modifyMemo = (id, content) => {
   return {
     type: MODIFY_MEMO,
     payload: api.modifyMemo(id, content)
   }
-}
+};
 
 export const deleteMemo = (id) => {
   api.deleteMemo(id)
@@ -41,4 +41,4 @@ export const deleteMemo = (id) => {
     type: DELETE_MEMO,
     payload: id
   }
-}
+};
