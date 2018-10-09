@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-import { toast } from "react-toastify";
 import _ from 'lodash';
 
 const rootReducer = combineReducers({
@@ -19,7 +18,6 @@ function memo(state = { all: [], memo: {} } , action) {
         memo: action.payload.data
       };
     case 'ADD_MEMO':
-      toast.success("메모 추가");
       return {
       ...state,
       all: [action.payload.data, ...state.all]
@@ -38,7 +36,6 @@ function memo(state = { all: [], memo: {} } , action) {
         memo: action.payload.data
       };
     case 'DELETE_MEMO':
-      toast.error("메모 삭제");
       return {
         ...state,
         all: _.filter(state.all, (memo) => memo.id !== Number(action.payload))

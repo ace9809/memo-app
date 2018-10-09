@@ -10,8 +10,6 @@ import { getMemoList } from 'actions';
 import Header from 'containers/Header';
 import MemoForm from 'containers/MemoForm';
 import Memo from 'components/Memo';
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -88,7 +86,6 @@ class App extends Component {
               })
             }
           </MemoFormWrapper>
-          <ToastContainer autoClose={2000} position={"top-center"}/>
         </Wrapper>
       </Router>
     );

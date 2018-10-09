@@ -82,7 +82,7 @@ class MemoForm extends Component {
 
   updateMemo = () => {
     if (!this.state.title || !this.state.description) {
-      toast.error("제목과 내용을 다 입력해주세요", { autoClose: 5000 });
+      alert("제목과 내용을 다 입력해주세요");
     } else {
       this.props.modifyMemo(this.props.id, {'title': this.state.title, 'description': this.state.description})
     }
